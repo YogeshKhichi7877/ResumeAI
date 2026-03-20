@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <!-- Hard drop shadow -->
+  <rect x="47" y="9" width="72" height="72" fill="#000"/>
+  <!-- Icon box -->
+  <rect x="40" y="2" width="72" height="72" fill="#FACC15" stroke="#000" stroke-width="3"/>
+  <!-- R lettermark -->
+  <text x="76" y="59"
+    font-family="'Arial Black','Impact',Arial,sans-serif"
+    font-size="52" font-weight="900"
+    fill="#000" text-anchor="middle">R</text>
+  <!-- AI spark square -->
+  <rect x="90" y="8" width="8" height="8" fill="#000"/>
+  <rect x="102" y="4" width="5" height="5" fill="#000" opacity="0.45"/>
+
+  <!-- Wordmark: RESUME -->
+  <text x="128" y="52"
+    font-family="'Arial Black','Impact',Arial,sans-serif"
+    font-size="36" font-weight="900"
+    fill="#000" letter-spacing="2">RESUME</text>
+
+  <!-- AI badge -->
+  <rect x="329" y="18" width="68" height="38" fill="#FACC15" stroke="#000" stroke-width="3"/>
+  <text x="363" y="46"
+    font-family="'Arial Black','Impact',Arial,sans-serif"
+    font-size="28" font-weight="900"
+    fill="#000" text-anchor="middle" letter-spacing="2">AI</text>
+
+  <!-- Tagline -->
+  <text x="129" y="70"
+    font-family="Arial,sans-serif"
+    font-size="10" font-weight="700"
+    fill="#6B7280" letter-spacing="5">SMART CAREER TOOLS</text>
+
+  <!-- Bottom rule -->
+  <rect x="128" y="78" width="270" height="3" fill="#000"/>
+</svg>

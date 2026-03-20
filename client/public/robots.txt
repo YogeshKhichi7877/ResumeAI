@@ -1,0 +1,34 @@
+# robots.txt for Resume AI
+# https://resumeai.in
+
+User-agent: *
+Allow: /
+
+# Block admin and API routes from indexing
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /upload
+Disallow: /analysis/
+Disallow: /chat
+Disallow: /mock-interview
+Disallow: /jd-match
+Disallow: /cover-letter
+Disallow: /rewrite
+Disallow: /cold-outreach
+
+# Allow public pages
+Allow: /$
+Allow: /features
+Allow: /how-it-works
+Allow: /pricing
+Allow: /privacy
+Allow: /terms
+Allow: /contact
+Allow: /auth
+
+# Sitemap location
+Sitemap: https://resumeai.in/sitemap.xml
+
+# Crawl delay (be polite)
+Crawl-delay: 10

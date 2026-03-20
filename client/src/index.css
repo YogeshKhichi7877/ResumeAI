@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Neobrutalism Base Styles */
+@layer components {
+  .neo-card {
+    @apply bg-white border-3 border-black shadow-neo;
+  }
+
+  .neo-card-sm {
+    @apply bg-white border-3 border-black shadow-neo-sm;
+  }
+
+  .neo-button {
+    @apply bg-black text-white border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-yellow {
+    @apply bg-neo-yellow text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-green {
+    @apply bg-neo-green text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-red {
+    @apply bg-neo-red text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-purple {
+    @apply bg-neo-purple text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-orange {
+    @apply bg-neo-orange text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-button-blue {
+    @apply bg-neo-blue text-black border-3 border-black shadow-neo px-6 py-3 font-bold uppercase tracking-wide;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm transition-all duration-100;
+  }
+
+  .neo-input {
+    @apply w-full bg-white border-3 border-black px-4 py-3 font-inter outline-none;
+    @apply focus:shadow-neo-sm focus:translate-x-[2px] focus:translate-y-[2px] focus:bg-neo-yellow/20 transition-all duration-100;
+  }
+
+  .neo-select {
+    @apply w-full bg-white border-3 border-black px-4 py-3 font-inter outline-none cursor-pointer;
+    @apply focus:shadow-neo-sm focus:bg-neo-yellow/20 transition-all duration-100;
+  }
+
+  .neo-badge {
+    @apply inline-block bg-neo-yellow border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-green {
+    @apply inline-block bg-neo-green border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-red {
+    @apply inline-block bg-neo-red border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-blue {
+    @apply inline-block bg-neo-blue border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-purple {
+    @apply inline-block bg-neo-purple border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-yellow {
+    @apply inline-block bg-neo-yellow border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-badge-orange {
+    @apply inline-block bg-neo-orange border-2 border-black px-3 py-1 text-sm font-bold uppercase;
+  }
+
+  .neo-heading {
+    @apply font-space font-extrabold uppercase tracking-wide;
+  }
+
+  .neo-section {
+    @apply py-16 px-4;
+  }
+
+  .neo-divider {
+    @apply border-t-3 border-black;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Score circle styles */
+.score-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.score-circle svg {
+  transform: rotate(-90deg);
+}
+
+.score-circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
