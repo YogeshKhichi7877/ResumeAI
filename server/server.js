@@ -13,6 +13,13 @@ app.use(cors({
   origin: ['https://resumeai-api-pac6.onrender.com', 'https://resume-ai-pearl.vercel.app/' ,'http://localhost:5173'],
   credentials: true
 }));
+
+// Debug middleware - log all requests
+app.use((req, res, next) => {
+  console.log(`[SERVER] ${req.method} ${req.url} - Body:`, req.body);
+  next();
+});
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
