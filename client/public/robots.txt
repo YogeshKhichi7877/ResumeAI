@@ -1,5 +1,5 @@
 # robots.txt for Resume AI
-# https://resumeai.in
+# https://resume-ai-pearl.vercel.app/
 
 User-agent: *
 Allow: /

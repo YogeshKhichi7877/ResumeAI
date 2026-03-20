@@ -6,7 +6,7 @@
 
   <!-- Home Page — highest priority -->
   <url>
-    <loc>https://resumeai.in/</loc>
+    <loc>https://resume-ai-pearl.vercel.app/</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Features Page -->
   <url>
-    <loc>https://resumeai.in/features</loc>
+    <loc>https://resume-ai-pearl.vercel.app/features</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- How It Works -->
   <url>
-    <loc>https://resumeai.in/how-it-works</loc>
+    <loc>https://resume-ai-pearl.vercel.app/how-it-works</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
   <!-- Pricing -->
   <url>
-    <loc>https://resumeai.in/pricing</loc>
+    <loc>https://resume-ai-pearl.vercel.app/pricing</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Auth / Sign Up -->
   <url>
-    <loc>https://resumeai.in/auth</loc>
+    <loc>https://resume-ai-pearl.vercel.app/auth</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -46,7 +46,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://resumeai.in/contact</loc>
+    <loc>https://resume-ai-pearl.vercel.app/contact</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -54,7 +54,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://resumeai.in/privacy</loc>
+    <loc>https://resume-ai-pearl.vercel.app/privacy</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -62,14 +62,14 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://resumeai.in/terms</loc>
+    <loc>https://resume-ai-pearl.vercel.app/terms</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
    <url>
-    <loc>https://resumeai.in/dashboard</loc>
+    <loc>https://resume-ai-pearl.vercel.app/dashboard</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
