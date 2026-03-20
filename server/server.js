@@ -8,8 +8,11 @@ connectDB();
 
 const app = express();
 
-// Simple CORS for development
-app.use(cors());
+// CORS configuration for production
+app.use(cors({
+  origin: ['https://resumeai-api-pac6.onrender.com', 'https://your-frontend.vercel.app'],
+  credentials: true
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
@@ -21,8 +24,31 @@ app.use('/api/payment', require('./routes/paymentRoutes'));
 app.use('/api/telegram', require('./routes/telegramRoutes'));
 
 // Health check
+const API_BASE_URL = 'https://resumeai-api-pac6.onrender.com';
+
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', env: 'development', ts: new Date().toISOString() });
+  res.json({ 
+    status: 'ok', 
+    env: 'production', 
+    apiUrl: API_BASE_URL,
+    ts: new Date().toISOString() 
+  });
+});
+
+// Root route showing API URL
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'ResumeAI API Server',
+    apiUrl: API_BASE_URL,
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      resume: '/api/resume',
+      history: '/api/history',
+      payment: '/api/payment',
+      telegram: '/api/telegram'
+    }
+  });
 });
 
 // Error handler
