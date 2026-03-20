@@ -8,57 +8,48 @@ connectDB();
 
 const app = express();
 
-// CORS configuration for production
+// ── Body parsers FIRST ────────────────────────────────────────
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// ── CORS ──────────────────────────────────────────────────────
 app.use(cors({
-  origin: ['https://resumeai-api-pac6.onrender.com', 'https://resume-ai-pearl.vercel.app/' ,'http://localhost:5173'],
-  credentials: true
+  origin: [
+    'http://localhost:5173',
+    'https://resume-ai-pearl.vercel.app',
+    'https://resumeai-api-pac6.onrender.com'  // ← no trailing slash
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-// Debug middleware - log all requests
+// Handle preflight requests
+app.options('*', cors());
+
+// ── Debug middleware ──────────────────────────────────────────
 app.use((req, res, next) => {
   console.log(`[SERVER] ${req.method} ${req.url} - Body:`, req.body);
   next();
 });
 
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-
-// API Routes
-app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/resume', require('./routes/resumeRoutes'));
-app.use('/api/history', require('./routes/historyRoutes'));
-app.use('/api/payment', require('./routes/paymentRoutes'));
+// ── API Routes ────────────────────────────────────────────────
+app.use('/api/auth',     require('./routes/authRoutes'));
+app.use('/api/resume',   require('./routes/resumeRoutes'));
+app.use('/api/history',  require('./routes/historyRoutes'));
+app.use('/api/payment',  require('./routes/paymentRoutes'));
 app.use('/api/telegram', require('./routes/telegramRoutes'));
 
-// Health check
-const API_BASE_URL = 'https://resumeai-api-pac6.onrender.com';
-
+// ── Health check ──────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    env: 'production', 
-    apiUrl: API_BASE_URL,
-    ts: new Date().toISOString() 
-  });
+  res.json({ status: 'ok', ts: new Date().toISOString() });
 });
 
-// Root route showing API URL
 app.get('/', (req, res) => {
-  res.json({ 
-    message: 'ResumeAI API Server',
-    apiUrl: API_BASE_URL,
-    endpoints: {
-      health: '/api/health',
-      auth: '/api/auth',
-      resume: '/api/resume',
-      history: '/api/history',
-      payment: '/api/payment',
-      telegram: '/api/telegram'
-    }
-  });
+  res.json({ message: 'ResumeAI API Server is running' });
 });
 
-// Error handler
+// ── Error handlers ────────────────────────────────────────────
 app.use((err, req, res, next) => {
   console.error('[Error]', err.message);
   res.status(err.status || 500).json({ message: err.message });
@@ -66,10 +57,11 @@ app.use((err, req, res, next) => {
 
 app.use((req, res) => res.status(404).json({ message: 'Route not found' }));
 
+// ── Start ─────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3014;
 app.listen(PORT, () => {
-  console.log(`Connected to MongoDB`);
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`MongoDB connected`);
 });
 
 module.exports = app;
