@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0L0 0 0 44" fill="none" stroke="#FFE566" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left yellow accent bar -->
+  <rect x="0" y="0" width="10" height="630" fill="#FFE566"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="#FFE566" opacity="0.6"/>
+
+  <!-- Bottom URL strip -->
+  <rect x="0" y="592" width="1200" height="38" fill="#FFE566"/>
+
+  <!-- Corner brackets -->
+  <rect x="28" y="28" width="50" height="4" fill="#FFE566" opacity="0.35"/>
+  <rect x="28" y="28" width="4" height="50" fill="#FFE566" opacity="0.35"/>
+  <rect x="1122" y="28" width="50" height="4" fill="#FFE566" opacity="0.35"/>
+  <rect x="1168" y="28" width="4" height="50" fill="#FFE566" opacity="0.35"/>
+  <rect x="28" y="558" width="50" height="4" fill="#FFE566" opacity="0.35"/>
+  <rect x="28" y="510" width="4" height="52" fill="#FFE566" opacity="0.35"/>
+  <rect x="1122" y="558" width="50" height="4" fill="#FFE566" opacity="0.35"/>
+  <rect x="1168" y="510" width="4" height="52" fill="#FFE566" opacity="0.35"/>
+
+  <!-- ══════════════════════
+       LOGO ROW
+  ══════════════════════ -->
+
+  <!-- R icon drop shadow -->
+  <rect x="82" y="80" width="96" height="96" fill="#FFE566" opacity="0.2"/>
+
+  <!-- R icon box -->
+  <rect x="72" y="70" width="96" height="96" fill="#FFE566"/>
+
+  <!-- R letter -->
+  <text x="120" y="146"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-size="72" font-weight="900"
+    fill="#000" text-anchor="middle">R</text>
+
+  <!-- AI spark squares -->
+  <rect x="150" y="78" width="10" height="10" fill="#000"/>
+  <rect x="163" y="73" width="7" height="7" fill="#000" opacity="0.45"/>
+
+  <!-- RESUME wordmark -->
+  <text x="188" y="140"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-size="56" font-weight="900"
+    fill="#FFFFFF" letter-spacing="3">RESUME</text>
+
+  <!-- AI badge shadow -->
+  <rect x="488" y="88" width="88" height="50" fill="#000" opacity="0.25"/>
+
+  <!-- AI badge -->
+  <rect x="480" y="80" width="88" height="50" fill="#FFE566"/>
+
+  <!-- AI text -->
+  <text x="524" y="116"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-size="34" font-weight="900"
+    fill="#000" text-anchor="middle" letter-spacing="3">AI</text>
+
+  <!-- Rule under wordmark -->
+  <rect x="188" y="168" width="382" height="3" fill="#FFE566"/>
+
+  <!-- Tagline -->
+  <text x="190" y="187"
+    font-family="Arial, sans-serif"
+    font-size="12" font-weight="700"
+    fill="#FFE566" opacity="0.55" letter-spacing="5">SMART CAREER TOOLS</text>
+
+  <!-- ══════════════════════
+       MAIN HEADLINE — sized to fit 1130px safe width
+  ══════════════════════ -->
+
+  <!-- Line 1: "YOUR RESUME IS" at 72px fits ~1050px wide -->
+  <text x="72" y="295"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-size="72" font-weight="900"
+    fill="#FFFFFF" letter-spacing="-1">YOUR RESUME IS</text>
+
+  <!-- Line 2 highlight box — width calculated for 72px text -->
+  <rect x="68" y="308" width="1112" height="96" fill="#FFE566"/>
+  <rect x="76" y="316" width="1112" height="96" fill="#000" opacity="0.10"/>
+
+  <!-- Line 2: "COSTING YOU JOBS." at 72px fits safely -->
+  <text x="78" y="383"
+    font-family="'Arial Black', Impact, Arial, sans-serif"
+    font-size="72" font-weight="900"
+    fill="#000" letter-spacing="-1">COSTING YOU JOBS.</text>
+
+  <!-- ══════════════════════
+       SUBTEXT
+  ══════════════════════ -->
+  <text x="72" y="450"
+    font-family="Arial, sans-serif"
+    font-size="20" font-weight="600"
+    fill="#FFFFFF" opacity="0.65">AI-powered ATS scoring  ·  JD matching  ·  Cover letters  ·  Mock interviews</text>
+
+  <!-- ══════════════════════
+       FEATURE PILLS
+  ══════════════════════ -->
+
+  <!-- Pill 1 -->
+  <rect x="72" y="482" width="158" height="38" fill="none" stroke="#FFE566" stroke-width="2"/>
+  <text x="151" y="505"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="12" font-weight="900"
+    fill="#FFE566" text-anchor="middle" letter-spacing="1">FREE TO START</text>
+
+  <!-- Pill 2 filled -->
+  <rect x="248" y="482" width="138" height="38" fill="#FFE566"/>
+  <text x="317" y="505"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="12" font-weight="900"
+    fill="#000" text-anchor="middle" letter-spacing="1">AI POWERED</text>
+
+  <!-- Pill 3 -->
+  <rect x="404" y="482" width="178" height="38" fill="none" stroke="#FFE566" stroke-width="2"/>
+  <text x="493" y="505"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="12" font-weight="900"
+    fill="#FFE566" text-anchor="middle" letter-spacing="1">BUILT FOR INDIA</text>
+
+  <!-- Pill 4 -->
+  <rect x="600" y="482" width="148" height="38" fill="none" stroke="#FFE566" stroke-width="2"/>
+  <text x="674" y="505"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="12" font-weight="900"
+    fill="#FFE566" text-anchor="middle" letter-spacing="1">ATS SCORING</text>
+
+  <!-- Pill 5 -->
+  <rect x="766" y="482" width="178" height="38" fill="none" stroke="#FFE566" stroke-width="2"/>
+  <text x="855" y="505"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="12" font-weight="900"
+    fill="#FFE566" text-anchor="middle" letter-spacing="1">MOCK INTERVIEWS</text>
+
+  <!-- ══════════════════════
+       BOTTOM URL BAR
+  ══════════════════════ -->
+  <text x="600" y="617"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-size="13" font-weight="900"
+    fill="#000" text-anchor="middle" letter-spacing="2">RESUME-AI-PEARL.VERCEL.APP  ·  FREE AI RESUME ANALYSER FOR INDIA</text>
+</svg>
