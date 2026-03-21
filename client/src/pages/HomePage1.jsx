@@ -5,6 +5,7 @@ import { Navbar } from '../pages/Navbar';
 import HomePricingSection from './HomePricingSection';
 import UpgradeModal from '../components/UpgradeModal';
 import { SEO } from '../components/SEO';
+import { AdBanner } from '../components/AdBanner';
 import {
   ArrowRight, ArrowUpRight, Check, Star, Zap, Target,
   FileText, MessageSquare, Mail, RefreshCw, Brain, Flame,
@@ -375,6 +376,11 @@ export const HomePage = () => {
         </div>
       </div>
 
+      {/* ══ AD 1 — after marquee, before how it works ════════════════════════ */}
+        <div className="px-6 max-w-7xl mx-auto">
+          <AdBanner />
+        </div>
+
       {/* ══ HOW IT WORKS ══════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 border-b-4 border-black" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-7xl mx-auto">
@@ -550,6 +556,11 @@ export const HomePage = () => {
         </div>
       </section>
 
+        {/* ══ AD 2 — after testimonials, before pricing ═════════════════════════ */}
+        <div className="px-6 max-w-7xl mx-auto border-b-4 border-black py-4" style={{ backgroundColor: '#FAFAF8' }}>
+          <AdBanner />
+        </div>
+
       {/* ══ PRICING ════════════════════════════════════════════════════════════ */}
       <HomePricingSection onUpgrade={openUpgrade} />
 
@@ -595,6 +606,11 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
+        {/* ══ AD 3 — before footer ══════════════════════════════════════════════ */}
+        <div className="px-6 max-w-7xl mx-auto py-4" style={{ backgroundColor: '#0A0A0A' }}>
+          <AdBanner />
+        </div>
 
       {/* ══ FOOTER ════════════════════════════════════════════════════════════ */}
       <footer className="border-t-4 border-black py-16 px-6" style={{ backgroundColor: '#0A0A0A', color: '#fff' }}>
