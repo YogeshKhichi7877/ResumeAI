@@ -13,24 +13,16 @@ const generateToken = (id) => {
 // @access  Public
 const register = async (req, res) => {
   try {
-    console.log('[AUTH] Register request received');
-    console.log('[AUTH] Request body:', req.body);
-    
     const { name, email, password , jobTitle, targetDomain, experienceLevel} = req.body;
-    
-    console.log('[AUTH] Name:', name, '| Email:', email);
-    console.log('[AUTH] JobTitle:', jobTitle, '| TargetDomain:', targetDomain, '| Experience:', experienceLevel);
 
     // Check if user exists
     const userExists = await User.findOne({ email });
-    console.log('[AUTH] User exists check:', userExists ? 'YES' : 'NO');
     
     if (userExists) {
       return res.status(400).json({ message: 'User already exists' });
     }
 
     // Create user
-    console.log('[AUTH] Creating user...');
     const user = await User.create({
       name,
       email,
@@ -39,10 +31,8 @@ const register = async (req, res) => {
       targetDomain,
       experienceLevel
     });
-    console.log('[AUTH] User created successfully:', user._id);
 
     if (user) {
-      console.log('[AUTH] Registration successful for:', user.email);
       res.status(201).json({
         _id: user._id,
         name: user.name,
@@ -53,7 +43,6 @@ const register = async (req, res) => {
         token: generateToken(user._id)
       });
     } else {
-      console.log('[AUTH] Invalid user data - user creation failed');
       res.status(400).json({ message: 'Invalid user data' });
     }
   } catch (error) {
@@ -73,7 +62,6 @@ const login = async (req, res) => {
     const user = await User.findOne({ email }).select('+password');
 
     if (user && (await user.matchPassword(password))) {
-      console.log('[AUTH] Login successful for:', user.email);
       res.json({
         _id: user._id,
         name: user.name,
@@ -98,7 +86,6 @@ const login = async (req, res) => {
 const getMe = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
-    console.log('[AUTH] getMe for user:', user.email);
     res.json({
       _id: user._id,
       name: user.name,
@@ -129,7 +116,6 @@ const updateProfile = async (req, res) => {
       user.targetDomain = req.body.targetDomain || user.targetDomain;
       user.experienceLevel = req.body.experienceLevel || user.experienceLevel;
 
-      console.log('[AUTH] Profile updated for:', user.email);
       const updatedUser = await user.save();
 
       res.json({

@@ -27,11 +27,11 @@ app.use(cors({
 // Handle preflight requests
 app.options('*', cors());
 
-// ── Debug middleware ──────────────────────────────────────────
-app.use((req, res, next) => {
-  console.log(`[SERVER] ${req.method} ${req.url} - Body:`, req.body);
-  next();
-});
+// ── Debug middleware (disabled for production) ──────────────────
+// app.use((req, res, next) => {
+//   console.log(`[SERVER] ${req.method} ${req.url} - Body:`, req.body);
+//   next();
+// });
 
 // ── API Routes ────────────────────────────────────────────────
 app.use('/api/auth',     require('./routes/authRoutes'));
