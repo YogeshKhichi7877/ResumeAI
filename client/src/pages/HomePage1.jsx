@@ -607,11 +607,6 @@ export const HomePage = () => {
         </div>
       </section>
 
-        {/* ══ AD 3 — before footer ══════════════════════════════════════════════ */}
-        <div className="px-6 max-w-7xl mx-auto py-4" style={{ backgroundColor: '#0A0A0A' }}>
-          <AdBanner />
-        </div>
-
       {/* ══ FOOTER ════════════════════════════════════════════════════════════ */}
       <footer className="border-t-4 border-black py-16 px-6" style={{ backgroundColor: '#0A0A0A', color: '#fff' }}>
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
