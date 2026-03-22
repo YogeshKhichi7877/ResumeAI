@@ -80,18 +80,20 @@ function ScoreRing({ score, size = 96, label }) {
 // ─────────────────────────────────────────────────────────────
 // PROGRESS BAR
 // ─────────────────────────────────────────────────────────────
-function Bar({ value, max = 100 }) {
+function Bar({ value, max = 100, thresholds }) {
   const pct = Math.min(100, Math.max(0, (scoreNum(value) / max) * 100));
+  const bg = thresholds
+    ? (scoreNum(value) >= thresholds.high ? '#22C55E' : scoreNum(value) >= thresholds.mid ? '#F59E0B' : '#EF4444')
+    : scoreHex(pct >= 10 ? value : pct * (100 / max));
   return (
     <div className="h-2 bg-gray-200 border border-black/10 w-full">
       <div
         className="h-full transition-all duration-700"
-        style={{ width: `${pct}%`, backgroundColor: scoreHex(pct >= 10 ? value : pct * (100 / max)) }}
+        style={{ width: `${pct}%`, backgroundColor: bg }}
       />
     </div>
   );
 }
-
 // ─────────────────────────────────────────────────────────────
 // SECTION WRAPPER
 // ─────────────────────────────────────────────────────────────
@@ -747,7 +749,7 @@ export const AnalysisPage = () => {
                         <span className="text-xs text-gray-400 font-bold">/10</span>
                       </div>
                     </div>
-                    <Bar value={p.score || 0} max={10} />
+                    <Bar value={p.score || 0} max={10} thresholds={{ high: 7, mid: 5 }} />
                     <p className="text-xs text-gray-600 font-medium mt-3 leading-relaxed">{p.reason}</p>
                   </div>
                 ))}
