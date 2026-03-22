@@ -20,8 +20,8 @@ export const AdBanner = () => {
 
   return (
     <div className="w-full my-6">
-      <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-2">
-        Advertisement
+      <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-2">
+        Google AdSense
       </p>
       <ins
         className="adsbygoogle"

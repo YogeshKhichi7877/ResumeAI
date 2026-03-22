@@ -556,10 +556,6 @@ export const HomePage = () => {
         </div>
       </section>
 
-        {/* ══ AD 2 — after testimonials, before pricing ═════════════════════════ */}
-        <div className="px-6 max-w-7xl mx-auto border-b-4 border-black py-4" style={{ backgroundColor: '#FAFAF8' }}>
-          <AdBanner />
-        </div>
 
       {/* ══ PRICING ════════════════════════════════════════════════════════════ */}
       <HomePricingSection onUpgrade={openUpgrade} />

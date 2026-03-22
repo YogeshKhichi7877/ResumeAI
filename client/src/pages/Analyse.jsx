@@ -299,12 +299,12 @@ export const AnalysisPage = () => {
   };
 
   const handleRoast = async () => {
-    if (!analysis?.resumeText) { toast.error('No resume text available'); return; }
+    if (!analysis?.resumeText) { toast.error('Some error occurred 😭 , try again in a while '); return; }
     setRoasting(true);
     try {
       const r = await resumeAPI.roastResume({ resumeText: analysis.resumeText });
       setRoastResult(r.data.roast);
-    } catch (e) { toast.error('Failed to roast resume'); }
+    } catch (e) { toast.error('Get pro to unlock it 👑'); }
     finally { setRoasting(false); }
   };
 
