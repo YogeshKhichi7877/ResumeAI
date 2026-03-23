@@ -28,6 +28,47 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://resume-ai-pearl.vercel.app/jd-match</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>https://resume-ai-pearl.vercel.app/mock-interview</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resume-ai-pearl.vercel.app/cover-letter</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resume-ai-pearl.vercel.app/rewrite</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resume-ai-pearl.vercel.app/cold-outreach</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://resume-ai-pearl.vercel.app/analysis</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Pricing -->
   <url>
     <loc>https://resume-ai-pearl.vercel.app/pricing</loc>
