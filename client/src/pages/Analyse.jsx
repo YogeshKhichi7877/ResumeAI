@@ -306,7 +306,28 @@ export const AnalysisPage = () => {
     try {
       const r = await resumeAPI.roastResume({ resumeText: analysis.resumeText });
       setRoastResult(r.data.roast);
-    } catch (e) { toast.error('Get pro to unlock it 👑'); }
+    } catch (e) {
+      // Check if it's a subscription/feature locked error
+      const status = e.response?.status;
+      const errorCode = e.response?.data?.error;
+      const errorMessage = e.response?.data?.message;
+
+      if (status === 403) {
+        if (errorCode === 'FEATURE_LOCKED') {
+          toast.error('Get pro to unlock it 👑');
+        } else if (errorCode === 'LIMIT_REACHED') {
+          toast.error('You have reached your monthly limit. Upgrade to get unlimited roasts!');
+        } else {
+          toast.error(errorMessage || 'Feature not available on your plan');
+        }
+      } else if (e.code === 'ERR_NETWORK' || e.message?.includes('Network') || e.message?.includes('network')) {
+        toast.error('Network error. Please check your connection.');
+      } else {
+        // Show actual error for debugging - this helps identify real issues
+        toast.error(errorMessage || 'Something went wrong. Please try again.');
+        console.error('Roast error:', e.response?.data || e.message);
+      }
+    }
     finally { setRoasting(false); }
   };
 
