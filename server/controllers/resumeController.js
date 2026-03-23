@@ -343,8 +343,30 @@ const roastResume = async (req, res) => {
     let cleanedResult = result.result;
     cleanedResult = cleanedResult.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
     
-    const jsonMatch = cleanedResult.match(/\{[\s\S]*\}/);
-    const parsedResult = jsonMatch ? JSON.parse(jsonMatch[0]) : JSON.parse(cleanedResult);
+    let parsedResult;
+    try {
+      // First try to extract and parse JSON properly
+      const jsonMatch = cleanedResult.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        parsedResult = JSON.parse(jsonMatch[0]);
+      } else {
+        // Try to sanitize problematic characters before parsing
+        const sanitized = cleanedResult
+          .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
+          .replace(/[\u2018\u2019]/g, "'")  // Replace smart quotes
+          .replace(/[\u201C\u201D]/g, '"')
+          .replace(/[\u2013\u2014]/g, '-')
+          .replace(/\u2026/g, '...');
+        parsedResult = JSON.parse(sanitized);
+      }
+    } catch (parseError) {
+      console.error('JSON Parse Error:', parseError.message);
+      // Return a gracefully handled error instead of crashing
+      return res.status(500).json({ 
+        message: 'Failed to parse AI response. Please try again.',
+        error: 'PARSE_ERROR'
+      });
+    }
     
     // Transform to match frontend expectations
     const transformedResult = {

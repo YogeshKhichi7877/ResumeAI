@@ -122,7 +122,8 @@ export function LockedActionButton({ action, onClick, children, className = '', 
     if (isBlocked) {
       setShowUpgrade(true);
     } else if (!disabled) {
-      onClick?.();
+      onClick?.(event);
+      console.log(`[FeaturePageGuard] Action "${action}" executed successfully.`);
     }
   };
 

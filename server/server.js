@@ -21,8 +21,9 @@ app.use(cors({
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization' ,  'admin-secret' , 'token' , 'X-Requested-With' , 'Accept' , 'Origin'],
+  allowedHeaders: ['Content-Type', 'Authorization' ,  'admin-secret'],
 }));
+
 
 // Handle preflight requests
 app.options('*', cors());
