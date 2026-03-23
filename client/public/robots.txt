@@ -23,6 +23,7 @@ Allow: /features
 Allow: /how-it-works
 Allow: /pricing
 Allow: /privacy
+Allow: /dashboard
 Allow: /terms
 Allow: /contact
 Allow: /auth
