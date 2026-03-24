@@ -146,7 +146,7 @@ export const HomePage = () => {
     <>
       <SEO
         title="AI Resume Analyser for Indian Job Seekers"
-        description="Resume AI is an AI-powered resume analyser built for Indian job seekers. Get ATS scores, cover letters, JD matching, cold emails & mock interview prep — free."
+        description="ResumeLens is an AI-powered resume analyser built for Indian job seekers. Get ATS scores, cover letters, JD matching, cold emails & mock interview prep — free."
         keywords="resume analyser India, ATS resume checker, AI resume builder, resume score, job application India, cover letter generator, resume tips for freshers"
       />
       <div
@@ -612,7 +612,7 @@ export const HomePage = () => {
               {/* Dark-background version of the logo */}
               <img
                 src="/logo-icon.svg"
-                alt="Resume AI"
+                alt="ResumeLens"
                 className="h-10 w-auto"
                 style={{ imageRendering: 'crisp-edges' }}
               />
@@ -679,7 +679,7 @@ export const HomePage = () => {
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
           <p className="text-xs text-white/30 font-semibold">
-            © 2026 Resume AI · Built to help you get hired
+            © 2026 ResumeLens · Built to help you get hired
           </p>
           <div className="flex gap-6">
             {['Privacy', 'Terms', 'Contact'].map((l) => (

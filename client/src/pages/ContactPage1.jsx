@@ -74,7 +74,7 @@ export const ContactPage = () => {
     <>
       <SEO
         title="Contact Us"
-        description="Get in touch with Resume AI. We answer within 24-48 hours on working days. For instant help, check our FAQ section."
+        description="Get in touch with ResumeLens. We answer within 24-48 hours on working days. For instant help, check our FAQ section."
         keywords="contact resume ai, customer support, resume analyzer help, job seeker support"
       />
       <div className="min-h-screen bg-white">
@@ -309,7 +309,7 @@ export const ContactPage = () => {
       {/* Footer */}
       <footer className="bg-black text-white py-8 px-4 border-t-3 border-black">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
-          <p>© 2026 Resume AI. All rights reserved. | India 🇮🇳</p>
+          <p>© 2026 ResumeLens. All rights reserved. | India 🇮🇳</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-neo-yellow transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-neo-yellow transition-colors">Terms of Service</Link>

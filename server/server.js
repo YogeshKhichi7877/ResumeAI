@@ -16,8 +16,8 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://resume-ai-pearl.vercel.app',
-    'https://resumeai-api-pac6.onrender.com'  // ← no trailing slash
+    'https://resumelens.me',
+    'https://resumelens-api-pac6.onrender.com'  // ← no trailing slash
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -47,7 +47,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({ message: 'ResumeAI API Server is running' });
+  res.json({ message: 'ResumeLens API Server is running' });
 });
 
 // ── Error handlers ────────────────────────────────────────────

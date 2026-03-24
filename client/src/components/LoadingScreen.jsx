@@ -173,7 +173,7 @@ export const LoadingScreen = ({ onDone, minTime = 2200, message = '' }) => {
               {/* Your actual logo */}
               <img
                 src="/full_logo_navbar.svg"
-                alt="Resume AI"
+                alt="ResumeLens"
                 style={{
                   height: 52,
                   width: 'auto',
@@ -300,7 +300,7 @@ export const LoadingScreen = ({ onDone, minTime = 2200, message = '' }) => {
           opacity: phase === 'enter' ? 0 : 1,
           transition: 'opacity 0.4s ease 1s',
         }}>
-          v3.0 · resumeai.in
+          v3.0 · resumelens.me
         </div>
       </div>
     </>

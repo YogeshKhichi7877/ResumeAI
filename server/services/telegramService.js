@@ -263,7 +263,7 @@ const handleStartCommand = async (msg) => {
   const chatId = msg.chat.id;
   await b.sendMessage(
     chatId,
-    `👋 *Resume AI Admin Bot*\n\n` +
+    `👋 *ResumeLens Admin Bot*\n\n` +
     `Your Chat ID is: \`${chatId}\`\n\n` +
     `Copy this and set it as *TELEGRAM_ADMIN_CHAT_ID* in your .env file.\n\n` +
     `Commands:\n` +

@@ -26,6 +26,6 @@ export default defineConfig({
   server: {
     port: 5173,
     hmr: { clientPort: 5173 },
-    proxy: { '/api': 'https://resumeai-api-pac6.onrender.com' }
+    proxy: { '/api': 'https://resumelens-api-pac6.onrender.com' }
   }
 });

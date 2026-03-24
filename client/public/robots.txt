@@ -1,5 +1,5 @@
-# robots.txt for Resume AI
-# https://resume-ai-pearl.vercel.app/
+# robots.txt for ResumeLens
+# https://resumelens.me/
 
 User-agent: *
 Allow: /
@@ -29,7 +29,7 @@ Allow: /contact
 Allow: /auth
 
 # Sitemap location
-Sitemap: https://resumeai.in/sitemap.xml
+Sitemap: https://resumelens.me/sitemap.xml
 
 # Crawl delay (be polite)
 Crawl-delay: 10

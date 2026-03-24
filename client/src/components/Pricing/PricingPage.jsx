@@ -159,7 +159,7 @@ export default function PricingPage() {
     { q: 'How does payment work?', a: 'Pay via any UPI app (GPay, PhonePe, Paytm) using our QR code or UPI ID. Then enter the 12-digit UTR reference number from your payment app. We verify and activate within 2 hours.' },
     { q: 'What is a UTR number?', a: 'A UTR (Unique Transaction Reference) is a 12-digit code generated for every UPI payment. Find it in your UPI app under "Transaction History" → tap the payment → copy the UTR/Reference number.' },
     { q: 'Can I use the free plan forever?', a: 'Yes! The free plan has no expiry. You get 4 lifetime resume analyses and ATS scores (score only, suggestions are locked). Other features require a paid plan.' },
-    { q: 'What if my payment is not verified?', a: 'Verification is usually within 2 hours. If it takes longer, email us at support@resumeai.in with your UTR number and we will manually activate within 24 hours.' },
+    { q: 'What if my payment is not verified?', a: 'Verification is usually within 2 hours. If it takes longer, email us at support@resumelens.me with your UTR number and we will manually activate within 24 hours.' },
     { q: 'Can I upgrade Starter → Pro?', a: 'Absolutely. Pay for Pro and submit the new UTR. Your plan upgrades to Pro for 60 days from that activation date.' },
   ];
 
@@ -167,7 +167,7 @@ export default function PricingPage() {
     <>
       <SEO
         title="Pricing"
-        description="Choose the best Resume AI plan for your job search. Free and premium plans available with AI resume analysis, ATS scoring, JD matching, and more."
+        description="Choose the best ResumeLens plan for your job search. Free and premium plans available with AI resume analysis, ATS scoring, JD matching, and more."
         keywords="resume pricing, ATS plan, premium resume, job seeker subscription, resume ai plans"
       />
       <div className="min-h-screen" style={{ backgroundColor: '#FFFDE7' }}>
@@ -187,7 +187,7 @@ export default function PricingPage() {
         </button>
 
         <div className="flex items-center gap-2">
-          <span className="text-xs font-black uppercase tracking-widest opacity-60">Resume AI</span>
+          <span className="text-xs font-black uppercase tracking-widest opacity-60">ResumeLens</span>
           <span className="text-xs font-black opacity-40">/</span>
           <span className="text-xs font-black uppercase tracking-widest">Pricing</span>
         </div>

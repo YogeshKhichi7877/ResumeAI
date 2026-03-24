@@ -280,7 +280,7 @@ export const FeaturesPage = () => {
     <>
       <SEO
         title="Features"
-        description="Explore Resume AI's powerful features: AI resume analysis, ATS scoring, JD matching, cover letter generator, and more."
+        description="Explore ResumeLens's powerful features: AI resume analysis, ATS scoring, JD matching, cover letter generator, and more."
         keywords="resume features, ATS score, AI resume analysis, cover letter generator, JD match, resume tools"
       />
       <div className="min-h-screen bg-white">
@@ -339,7 +339,7 @@ export const FeaturesPage = () => {
       {/* Footer */}
       <footer className="bg-black text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>© 2024 Resume AI. All rights reserved.</p>
+          <p>© 2024 ResumeLens. All rights reserved.</p>
         </div>
       </footer>
       </div>

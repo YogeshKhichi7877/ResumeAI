@@ -40,7 +40,7 @@ export default function OfflinePage() {
           <div className="w-10 h-10 bg-neo-yellow border-3 border-black flex items-center justify-center">
             <span className="font-space font-extrabold text-lg">R</span>
           </div>
-          <span className="font-space font-extrabold text-xl uppercase">Resume AI</span>
+          <span className="font-space font-extrabold text-xl uppercase">ResumeLens</span>
         </div>
       </nav>
 
@@ -112,7 +112,7 @@ export default function OfflinePage() {
       </main>
 
       <footer className="bg-black text-white py-4 px-4 text-center text-gray-500 text-xs border-t-3 border-black">
-        © 2026 Resume AI — AI features require internet connection
+        © 2026 ResumeLens — AI features require internet connection
       </footer>
     </div>
   );

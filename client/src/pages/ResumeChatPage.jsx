@@ -183,7 +183,7 @@ export const ResumeChatPage = () => {
             </div>
             <div>
               <h1 className="font-space text-3xl font-extrabold uppercase tracking-tight">
-                Resume AI Chat
+                ResumeLens Chat
               </h1>
               <p className="text-gray-500 font-medium text-sm">
                 Ask anything about your resume — powered by Groq AI

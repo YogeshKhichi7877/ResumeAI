@@ -20,7 +20,7 @@ export const PrivacyPage = () => {
     <>
       <SEO
         title="Privacy Policy"
-        description="Resume AI Privacy Policy - Learn how we collect, use, and protect your personal information and resume data."
+        description="ResumeLens Privacy Policy - Learn how we collect, use, and protect your personal information and resume data."
         keywords="privacy policy, data protection, resume privacy, personal information security"
       />
       <div className="min-h-screen bg-white">
@@ -53,7 +53,7 @@ export const PrivacyPage = () => {
           {/* Intro */}
           <div className="p-5 border-3 border-black bg-neo-blue/10 shadow-[4px_4px_0px_#000]">
             <p className="text-gray-700 leading-relaxed">
-              Resume AI ("we", "our", "us") is committed to protecting your personal data in accordance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>, the <strong>Information Technology Act, 2000</strong>, and the <strong>IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>. This Policy explains how we collect, use, store, and protect your information when you use our Platform.
+              ResumeLens ("we", "our", "us") is committed to protecting your personal data in accordance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>, the <strong>Information Technology Act, 2000</strong>, and the <strong>IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>. This Policy explains how we collect, use, store, and protect your information when you use our Platform.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export const PrivacyPage = () => {
             <div className="border-3 border-black p-5 bg-neo-green/10">
               <div className="space-y-2 text-gray-800">
                 <p><strong>Designation:</strong> Grievance & Data Protection Officer</p>
-                <p><strong>Organisation:</strong> Resume AI</p>
+                <p><strong>Organisation:</strong> ResumeLens</p>
                 <p><strong>Email:</strong> resumeaicom@gmail.com</p>
                 <p><strong>Postal Address:</strong> India</p>
                 <p><strong>Working Hours:</strong> Monday – Friday, 10:00 AM – 6:00 PM IST</p>
@@ -228,7 +228,7 @@ export const PrivacyPage = () => {
       {/* Footer */}
       <footer className="bg-black text-white py-8 px-4 border-t-3 border-black">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
-          <p>© 2026 Resume AI. All rights reserved. | DPDP Act, 2023 Compliant</p>
+          <p>© 2026 ResumeLens. All rights reserved. | DPDP Act, 2023 Compliant</p>
           <div className="flex gap-6">
             <Link to="/terms" className="hover:text-neo-yellow transition-colors">Terms of Service</Link>
             <Link to="/contact" className="hover:text-neo-yellow transition-colors">Contact</Link>

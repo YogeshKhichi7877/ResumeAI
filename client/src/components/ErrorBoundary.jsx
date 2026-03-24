@@ -77,7 +77,7 @@ export class ErrorBoundary extends Component {
     // In production you'd replace this with a proper error tracking
     // service like Sentry — mailto is the zero-dependency fallback
     try {
-      const subject = encodeURIComponent('[Resume AI] Runtime Error Report');
+      const subject = encodeURIComponent('[ResumeLens] Runtime Error Report');
       const body = encodeURIComponent(
         `Error: ${error?.toString()}\n\n` +
         `URL: ${window.location.href}\n` +
@@ -206,7 +206,7 @@ export class ErrorBoundary extends Component {
               color:'rgba(255,229,102,0.7)', fontSize:'0.65rem',
               fontWeight:700, letterSpacing:'3px', textTransform:'uppercase',
             }}>
-              resume-ai · error
+              resumelens · error
             </span>
             <span style={{
               color:'rgba(255,255,255,0.3)', fontSize:'0.65rem',
@@ -426,7 +426,7 @@ export class ErrorBoundary extends Component {
           fontSize:'0.62rem', color:'rgba(255,229,102,0.25)',
           letterSpacing:'3px', textTransform:'uppercase', fontWeight:700,
         }}>
-          Resume AI · Production Error Boundary
+          ResumeLens · Production Error Boundary
         </p>
       </div>
     );

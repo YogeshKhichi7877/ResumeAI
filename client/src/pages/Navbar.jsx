@@ -695,11 +695,11 @@ export const Navbar = () => {
             <Link
               to="/"
               className="flex items-center hover:opacity-70 transition-opacity"
-              aria-label="Resume AI — Home"
+              aria-label="ResumeLens — Home"
             >
               <img
                 src="/full_logo_navbar.svg"
-                alt="Resume AI"
+                alt="ResumeLens"
                 style={{ height: '53px', imageRendering: 'crisp-edges' }}
               />
             </Link>
@@ -838,10 +838,10 @@ export const Navbar = () => {
             MOBILE — icon logo left, hamburger right
         ══════════════════════════════════════════════════════════════ */}
         <div className="md:hidden flex items-center justify-between px-4 h-16">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity" aria-label="Resume AI">
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity" aria-label="ResumeLens">
             <img
               src="/logo-icon.svg"
-              alt="Resume AI"
+              alt="ResumeLens"
               style={{ height: '44px', imageRendering: 'crisp-edges' }}
             />
           </Link>

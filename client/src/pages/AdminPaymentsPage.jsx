@@ -254,7 +254,7 @@ export default function AdminPaymentsPage() {
           </div>
         </div>
 
-        <p className="mt-6 text-gray-600 text-xs font-mono tracking-widest uppercase">Resume AI · Internal Admin Console</p>
+        <p className="mt-6 text-gray-600 text-xs font-mono tracking-widest uppercase">ResumeLens · Internal Admin Console</p>
       </div>
     );
   }
@@ -272,7 +272,7 @@ export default function AdminPaymentsPage() {
             <span className="text-2xl">🛡️</span>
             <div>
               <h1 className="font-black text-white uppercase tracking-widest text-lg leading-none">Payment Admin Panel</h1>
-              <p className="text-gray-400 text-xs font-bold tracking-wide mt-0.5">Resume AI · Subscription Management</p>
+              <p className="text-gray-400 text-xs font-bold tracking-wide mt-0.5">ResumeLens · Subscription Management</p>
             </div>
           </div>
           <div className="flex items-center gap-2">

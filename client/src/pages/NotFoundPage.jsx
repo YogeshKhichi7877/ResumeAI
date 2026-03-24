@@ -32,7 +32,7 @@ export default function NotFoundPage() {
           <div className="w-10 h-10 bg-neo-yellow border-3 border-black flex items-center justify-center">
             <span className="font-space font-extrabold text-lg">R</span>
           </div>
-          <span className="font-space font-extrabold text-xl uppercase">Resume AI</span>
+          <span className="font-space font-extrabold text-xl uppercase">ResumeLens</span>
         </Link>
         <button
           onClick={() => navigate(-1)}
@@ -98,7 +98,7 @@ export default function NotFoundPage() {
 
       {/* Footer */}
       <footer className="bg-black text-white py-4 px-4 border-t-3 border-black text-center text-gray-400 text-sm">
-        © 2026 Resume AI. All rights reserved.
+        © 2026 ResumeLens. All rights reserved.
       </footer>
     </div>
   );

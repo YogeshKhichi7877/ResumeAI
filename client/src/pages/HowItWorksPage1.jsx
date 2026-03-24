@@ -292,7 +292,7 @@ export const HowItWorksPage = () => {
     <>
       <SEO
         title="How It Works"
-        description="Learn how Resume AI works - upload your resume, get AI analysis, improve your chances of landing your dream job in India."
+        description="Learn how ResumeLens works - upload your resume, get AI analysis, improve your chances of landing your dream job in India."
         keywords="how it works, resume analyzer process, AI resume analysis steps, job application guide"
       />
       <div className="min-h-screen bg-white">
@@ -399,7 +399,7 @@ export const HowItWorksPage = () => {
       {/* Footer */}
       <footer className="bg-black text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>© 2024 Resume AI. All rights reserved.</p>
+          <p>© 2024 ResumeLens. All rights reserved.</p>
         </div>
       </footer>
       </div>

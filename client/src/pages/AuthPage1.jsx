@@ -235,7 +235,7 @@ export const AuthPage = () => {
     <>
       <SEO
         title="Login or Sign Up"
-        description="Create a free Resume AI account to analyze your resume, get ATS scores, and land your dream job in India."
+        description="Create a free ResumeLens account to analyze your resume, get ATS scores, and land your dream job in India."
         keywords="login, sign up, resume ai account, free resume analyzer registration"
       />
       <div className="min-h-screen bg-neo-offwhite flex flex-col">
@@ -247,7 +247,7 @@ export const AuthPage = () => {
         <Link to="/" className="flex items-center hover:opacity-70 transition-opacity">
           <img
             src="/full_logo_navbar.svg"
-            alt="Resume AI"
+            alt="ResumeLens"
             style={{ height: '56px', imageRendering: 'crisp-edges' }}
           />
         </Link>

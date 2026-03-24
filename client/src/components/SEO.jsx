@@ -10,14 +10,14 @@ export const SEO = ({
   description,
   keywords,
   canonical,
-  ogImage = 'https://resumeai.in/og-image.png',
+  ogImage = 'https://resumelens.me/og-image.png',
   ogType = 'website',
   noIndex = false,
 }) => {
   useEffect(() => {
-    const siteName = 'Resume AI';
+    const siteName = 'ResumeLens';
     const fullTitle = title ? `${title} | ${siteName}` : `${siteName} — AI Resume Analyser for Indian Job Seekers`;
-    const finalDesc = description || 'Resume AI is an AI-powered resume analyser built for Indian job seekers. Get ATS scores, cover letters, JD matching, cold emails & mock interview prep — free.';
+    const finalDesc = description || 'ResumeLens is an AI-powered resume analyser built for Indian job seekers. Get ATS scores, cover letters, JD matching, cold emails & mock interview prep — free.';
     const finalKeywords = keywords || 'resume analyser India, ATS resume checker, AI resume builder, resume score, job application India, cover letter generator, resume tips for freshers';
     const finalCanonical = canonical || window.location.href;
 
@@ -49,7 +49,7 @@ export const SEO = ({
     setMeta('description', finalDesc);
     setMeta('keywords', finalKeywords);
     setMeta('robots', noIndex ? 'noindex, nofollow' : 'index, follow');
-    setMeta('author', 'Resume AI');
+    setMeta('author', 'ResumeLens');
     setMeta('language', 'English');
     setMeta('revisit-after', '7 days');
 

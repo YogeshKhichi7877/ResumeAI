@@ -87,7 +87,7 @@ export const InstallBanner = () => {
               </div>
               <div>
                 <p className="font-space font-extrabold text-white text-base uppercase leading-tight">
-                  Install Resume AI
+                  Install ResumeLens
                 </p>
                 <p className="text-neo-yellow/70 text-xs uppercase tracking-wide">
                   Add to Home Screen

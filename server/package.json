@@ -1,7 +1,7 @@
 {
   "name": "resume-analyser-server",
   "version": "1.0.0",
-  "description": "Backend server for Resume AI Analyzer",
+  "description": "Backend server for ResumeLens Analyzer",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {

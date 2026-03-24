@@ -74,7 +74,7 @@ export default function PremiumCheckoutModal({ isOpen, onClose, plan, price }) {
                 Your UTR has been received. We will verify and activate your <strong>{planLabel} plan</strong> within <span className="underline decoration-2">2 hours</span>.
               </p>
               <p className="text-xs font-mono bg-white border-2 border-black px-3 py-1 inline-block">UTR: <strong>{utr}</strong></p>
-              <p className="text-xs text-gray-500">Questions? <a href="mailto:support@resumeai.in" className="underline font-bold">support@resumeai.in</a></p>
+              <p className="text-xs text-gray-500">Questions? <a href="mailto:support@resumelens.me" className="underline font-bold">support@resumelens.me</a></p>
               <button onClick={onClose} className="mt-2 w-full py-3 bg-black text-white font-black uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors" style={{ border: '3px solid black' }}>
                 Got It — Close
               </button>
