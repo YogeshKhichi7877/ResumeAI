@@ -17,7 +17,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://resumelens.me',
-    'https://resumelens-api-pac6.onrender.com'  // ← no trailing slash
+    'https://resumeai-api-pac6.onrender.com'  // ← no trailing slash
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

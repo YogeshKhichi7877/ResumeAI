@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'https://resumelens-api-pac6.onrender.com/api';
+const API_URL = 'https://resumeai-api-pac6.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
