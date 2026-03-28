@@ -17,7 +17,11 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://resumelens.me',
-    'https://resumeai-api-pac6.onrender.com'  // ← no trailing slash
+    'https://resume-ai-pearl.vercel.app/',
+    'https://resume-ai-pearl.vercel.app',
+    'https://resumeai-api-pac6.onrender.com' ,
+    'https://resumeai-api-pac6.onrender.com/' ,
+    'https' // ← no trailing slash
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
