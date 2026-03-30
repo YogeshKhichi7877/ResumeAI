@@ -87,20 +87,25 @@ export const Navbar = () => {
             </Link>
           </div>
 
-          {/* ── COL 2: NAV LINKS — perfectly centered ────────────────── */}
+        {/* COL 2: NAV LINKS */}
           <div className="flex items-stretch">
-            {publicLinks.map(({ to, label, icon }) => (
-              <Link
-                key={to}
-                to={to}
-                className={`flex items-center gap-1.5 px-5 font-bold text-sm uppercase tracking-wide border-l border-black/10 transition-all
-                  ${isActive(to)
-                    ? 'bg-neo-yellow text-black border-b-[3px] border-b-black'
-                    : 'hover:bg-neo-offwhite text-black'}`}
-              >
-                {icon}{label}
-              </Link>
-            ))}
+            {publicLinks.map(({ to, label, icon }) => {
+              const isStaticHtml = to.endsWith('.html');
+              const linkClass = `flex items-center gap-1.5 px-5 font-bold text-sm uppercase tracking-wide border-l border-black/10 transition-all
+                ${isActive(to)
+                  ? 'bg-neo-yellow text-black border-b-[3px] border-b-black'
+                  : 'hover:bg-neo-offwhite text-black'}`;
+
+              return isStaticHtml ? (
+                <a key={to} href={to} className={linkClass}>
+                  {icon}{label}
+                </a>
+              ) : (
+                <Link key={to} to={to} className={linkClass}>
+                  {icon}{label}
+                </Link>
+              );
+            })}
 
             {/* Tools dropdown */}
             {user && (
