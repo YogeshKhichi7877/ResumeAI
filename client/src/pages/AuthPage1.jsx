@@ -437,7 +437,7 @@ export const AuthPage = () => {
                       value={name}
                       onChange={e => setName(e.target.value)}
                       className="neo-input"
-                      placeholder="e.g. Rahul Sharma"
+                      placeholder="e.g. Sanju Samson"
                       required={!isLogin}
                     />
                   </div>

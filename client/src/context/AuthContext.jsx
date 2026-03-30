@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
             logout(false); // silent logout — no "Logged out" toast
             toast.error('Your session has expired. Please log in again.', {
               id: 'session-expired', // prevents duplicate toasts
-              duration: 4000,
+              duration: 5000,
             });
             // Redirect to auth page
             window.location.href = '/auth';

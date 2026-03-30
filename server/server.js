@@ -20,8 +20,7 @@ app.use(cors({
     'https://resume-ai-pearl.vercel.app/',
     'https://resume-ai-pearl.vercel.app',
     'https://resumeai-api-pac6.onrender.com' ,
-    'https://resumeai-api-pac6.onrender.com/' ,
-    'https' // ← no trailing slash
+    'https://resumeai-api-pac6.onrender.com/' , 
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
