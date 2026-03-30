@@ -643,6 +643,7 @@ export const HomePage = () => {
                 { label: 'How It Works',  to: '/how-it-works' },
                 { label: 'Dashboard',     to: user ? '/dashboard' : '/auth' },
                 { label: 'Admin',         to: '/admin/payments' },
+
               ].map(({ label, to }) => (
                 <li key={label}>
                   <Link to={to} className="text-sm font-bold text-white/60 hover:text-white transition-colors">
@@ -661,8 +662,7 @@ export const HomePage = () => {
               {[
                 { label: 'Portfolio',    to: `https://yogeshportfolio2.vercel.app/` },
                 { label: 'PaperStack',        to: `https://paper-stack-beryl.vercel.app/` },
-                { label: 'Expense Tracker',  to: `https://expensetracker2-eight.vercel.app/` },
-               
+                { label: 'Expense Tracker',  to: `https://expensetracker2-eight.vercel.app/` }
               ].map(({ label, to }) => (
                 <li key={label}>
                   <a href={to} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-white/60 hover:text-white transition-colors">
