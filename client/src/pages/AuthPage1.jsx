@@ -226,7 +226,7 @@ export const AuthPage = () => {
     setLoading(true);
     const success = isLogin
       ? await login(email, password)
-      : await register(name, email, password);
+      : await register(name, email, password, jobTitle, domain, expLevel);
     setLoading(false);
     if (success) navigate('/dashboard');
   };

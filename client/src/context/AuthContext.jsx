@@ -94,20 +94,22 @@ export const AuthProvider = ({ children }) => {
       toast.success('Login successful!');
       return true;
     } catch (error) {
+      console.log("Login error is : ",error) ;
       toast.error(error.response?.data?.message || 'Login failed');
       return false;
     }
   };
  
   // ── Register ──────────────────────────────────────────────
-  const register = async (name, email, password) => {
+  const register = async (name, email, password, jobTitle, targetDomain, experienceLevel) => {
     try {
-      const response = await authAPI.register({ name, email, password });
+      const response = await authAPI.register({ name, email, password, jobTitle, targetDomain, experienceLevel });
       localStorage.setItem('token', response.data.token);
       setUser(response.data);
       toast.success('Registration successful!');
       return true;
     } catch (error) {
+      console.log("registration error iss :  ",error) ;
       toast.error(error.response?.data?.message || 'Registration failed');
       return false;
     }
