@@ -13,23 +13,46 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // ── CORS ──────────────────────────────────────────────────────
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://resumelens.me',
+  'https://www.resumelens.me',
+  'https://resume-ai-pearl.vercel.app',
+  'https://resumeai-api-pac6.onrender.com',
+];
+
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://resumelens.me',
-    'https://resume-ai-pearl.vercel.app/',
-    'https://resume-ai-pearl.vercel.app',
-    'https://resumeai-api-pac6.onrender.com' ,
-    'https://resumeai-api-pac6.onrender.com/' , 
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (mobile apps, curl, server-to-server)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, origin);
+    }
+    // Allow any Vercel preview deployment
+    if (origin.endsWith('.vercel.app')) {
+      return callback(null, origin);
+    }
+    console.warn('[CORS] Blocked origin:', origin);
+    return callback(new Error(`CORS: origin ${origin} not allowed`));
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization' ,  'admin-secret'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'admin-secret'],
 }));
 
-
 // Handle preflight requests
-app.options('*', cors());
+app.options('*', cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin) || (origin && origin.endsWith('.vercel.app'))) {
+      return callback(null, origin);
+    }
+    return callback(new Error(`CORS: origin ${origin} not allowed`));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'admin-secret'],
+}));
 
 // ── Debug middleware (disabled for production) ──────────────────
 // app.use((req, res, next) => {
